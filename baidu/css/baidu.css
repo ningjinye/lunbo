@@ -62,23 +62,27 @@ section{
     margin-bottom: 10px;
     width: 120px;
     height: 40px;
+    margin-left: 10px;
     background: url("../img/head.png") no-repeat -2px 0;
 }
 .index{
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+}
+.index:hover{
+    color: #67cbff;
 }
 .index:nth-of-type(2){
-    margin-left: 50px;
+    margin-left: 0px;
 }
 .index-right{
-   margin-bottom: 5px;
-}
-.index-right{
-    font-size: 12px;
+   margin-bottom: 0px;
 }
 .index-right:nth-of-type(5){
-    margin-left: 200px;
+    margin-left: 0px;
+}
+.index-right:last-of-type{
+    color: #fff;
 }
 i{
     display: inline-block;
@@ -88,20 +92,12 @@ i{
 }
 
 .logins{
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     top: 266px;
 }
-.login-area{
-    width: 340px;
-    height: 300px;
-    border-radius: 5px;
-    background: #4ebffc;
-    position: absolute;
-    top:-131px;
-    right: 0;
-}
+
 form{
     padding-top: 26px;
 }
@@ -252,6 +248,37 @@ form{
         top: -150px;
     }
 }
+.fp{
+    width: 28px;
+    height: 73px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 17px;
+    margin: auto 0;
+    z-index: 99;
+}
+.fp a{
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+    z-index: 9;
+}
+.fp a .btn{
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+.fp a .btn1{
+    background: #333;
+}
 .bottom1{
     height: 126px;
     background: #0d71cd;
@@ -292,36 +319,74 @@ form{
     position: absolute;
     bottom: 90px;
     left: 320px;
+    transform: translate(-30px,0);
+    transition: transform 2s ease;
 }
-.center2{
-    width: 1000px;
+.jiao a{
+    display: block;
+    width: 30px;
+    height: 26px;
+    background: url("../img/add.png") no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: jiao 2s ease;
+    animation-iteration-count: infinite;
+}
+@keyframes jiao {
+    0%{
+        opacity: 1;
+        top: 20px;
+    }
+    50%{
+        opacity: 0.5;
+        top: 30px;
+    }
+    100%{
+        opacity: 1;
+        top: 20px;
+    }
+}
+.jiao1 a{
+    display: block;
+    width: 30px;
+    height: 26px;
+    background: url("../img/add.png") no-repeat;
+    position: absolute;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    left: 0;
+    right: 0;
     margin: 0 auto;
-    position: relative;
+    animation: jiao1 2s ease;
+    animation-iteration-count: infinite;
 }
-.obj-brain{
-    width: 444px;
-    height: 427px;
-    background: url("../img/brain.png") no-repeat;
-    position: absolute;
-    right: 26px;
-    top: 120px;
+@keyframes jiao1 {
+    0%{
+        opacity: 1;
+        top: -60px;
+    }
+    50%{
+        opacity: 0.5;
+        top: -50px;
+    }
+    100%{
+        opacity: 1;
+        top: -60px;
+    }
 }
-.title{
-    position: absolute;
-    left: 30px;
-    top: 200px;
-    font-family: 'Microsoft Yahei';
-    color: #fff;
-    width: 500px;
-    z-index: 999;
-}
+
+
 .ain{
     width: 66px;
     height: 126px;
     text-indent: -9999em;
     float: left;
     background: url("../img/lx.png") no-repeat;
-    /*transform-style: preserve-3d;*/
+    transform-style: preserve-3d;
     animation: ain 2s ease;
     animation-iteration-count: infinite;
 }
@@ -407,14 +472,7 @@ form{
     position: absolute;
     display: block;
 }
-.allside{
-    width: 444px;
-    height: 330px;
-    position: absolute;
-    right: 60px;
-    top: 180px;
-    background: url("../img/allside.png") no-repeat;
-}
+
 .quanmian{
     background: url("../img/qm.png") no-repeat;
 }
@@ -472,14 +530,7 @@ form{
     bottom: 0;
     background: url("../img/bottom.png") no-repeat;
 }
-.obj-stat{
-    width: 603px;
-    height: 361px;
-    position: absolute;
-    background: url("../img/stat.png") no-repeat;
-    top: 170px;
-    right: 120px;
-}
+
 .zhuanye{
     background: url("../img/zhuanye.png") no-repeat;
 }
@@ -507,4 +558,280 @@ form{
 }
 .copyright a{
     color: #fff;
+}
+.max{
+    display: none;
+}
+.min{
+    display: flex;
+}
+.min-right{
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto 0;
+    cursor: pointer;
+}
+.top-line{
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    background: #fff;
+    transition: transform .8s ease;
+}
+.bottom-line{
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    bottom: 10px;
+    background: #fff;
+    transition: transform .8s ease;
+}
+.scence{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    perspective: 800px;
+}
+.cd{
+    width: 100%;
+    transform-style: preserve-3d;
+}
+.cd a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #000;
+    opacity: 0;
+    transform:rotateX(-90deg);
+}
+.cd a:hover{
+    color: #67cbff;
+}
+@keyframes cd {
+    0%{
+        opacity: 0;
+        transform:rotateX(-90deg);
+    }
+    100%{
+        opacity: 0.8;
+        transform:rotateX(0deg);
+    }
+}
+@keyframes cd1 {
+    0%{
+        opacity: 0.8;
+        transform:rotateX(0deg);
+    }
+    100%{
+        opacity: 0;
+        transform:rotateX(-90deg);
+    }
+}
+.cloud1{
+    width: 200%;
+    animation: cloud 20s linear infinite;
+}
+.cloud1 .cloud-one{
+    width: 50%;
+    height: 200px;
+    float: left;
+    background: url("../img/cloud1.png") no-repeat;
+}
+.cloud1 .cloud-two{
+    width: 50%;
+    height: 200px;
+    float: left;
+    background: url("../img/cloud1.png") no-repeat;
+}
+.cloud2{
+    width: 200%;
+    animation: cloud 30s linear infinite;
+}
+.cloud2 .cloud-one{
+    width: 50%;
+    height: 200px;
+    float: left;
+    background: url("../img/cloud2.png") no-repeat;
+}
+.cloud2 .cloud-two{
+    width: 50%;
+    height: 200px;
+    float: left;
+    background: url("../img/cloud2.png") no-repeat;
+}
+.cloud3{
+    width: 200%;
+    animation: cloud 18s linear infinite;
+}
+.cloud3 .cloud-one{
+    width: 50%;
+    height: 100px;
+    float: left;
+    background: url("../img/cloud3.png") no-repeat;
+}
+.cloud3 .cloud-two{
+    width: 50%;
+    height: 100px;
+    float: left;
+    background: url("../img/cloud3.png") no-repeat;
+}
+@keyframes cloud {
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-50%,0);
+    }
+}
+.obj{
+    display: none;
+}
+.center2{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.obj-brain{
+    display: none;
+    width: 444px;
+    height: 427px;
+    background: url("../img/brain.png") no-repeat;
+    position: absolute;
+    right: 60px;
+    top: 120px;
+}
+.allside{
+    display: none;
+    width: 444px;
+    height: 330px;
+    position: absolute;
+    right: 60px;
+    top: 180px;
+    background: url("../img/allside.png") no-repeat;
+}
+.obj-stat{
+    display: none;
+    width: 603px;
+    height: 361px;
+    position: absolute;
+    background: url("../img/stat.png") no-repeat;
+    top: 170px;
+    right: 60px;
+}
+.obj-r{
+    transform: translate(50px,0);
+    trnasition:transform 1s ease,opacity 1s ease;
+    opacity: 0;
+}
+
+@media screen and (max-width:1000px){
+    .login-area{
+        width: 340px;
+        height: 300px;
+        border-radius: 5px;
+        background: #4ebffc;
+        position: absolute;
+        top:-131px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 9;
+    }
+    .title{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 200px;
+        font-family: 'Microsoft Yahei';
+        color: #fff;
+        width: 470px;
+        z-index: 9;
+    }
+
+}
+
+
+
+
+@media screen and (min-width:1000px){
+    .max{
+        display: flex;
+    }
+    .min{
+        display: none;
+    }
+    .logo{
+        margin-left: 0px;
+    }
+    .index{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .index:nth-of-type(2){
+        margin-left: 50px;
+    }
+    .index-right{
+        margin-bottom: 5px;
+    }
+    .index-right{
+        font-size: 12px;
+    }
+    .index-right:nth-of-type(5){
+        margin-left: 200px;
+    }
+    .index-right:last-of-type{
+        color: #FFDA28;
+    }
+    .obj{
+        display: block;
+    }
+    .logins{
+        width: 1000px;
+    }
+    .login-area{
+        width: 340px;
+        height: 300px;
+        border-radius: 5px;
+        background: #4ebffc;
+        position: absolute;
+        top:-131px;
+        right: 0;
+    }
+    .obj-brain {
+        display: block;
+    }
+    .title{
+        position: absolute;
+        left: 30px;
+        top: 200px;
+        font-family: 'Microsoft Yahei';
+        color: #fff;
+        width: 500px;
+        transform: translate(-50px,0);
+        opacity: 0;
+        trnasition:transform 1s ease,opacity 1s ease;
+        z-index: 9;
+    }
+    .allside {
+        display: block;
+    }
+    .obj-stat {
+        display: block;
+    }
+    .center2{
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+
 }
