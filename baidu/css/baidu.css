@@ -728,7 +728,7 @@ form{
 }
 .obj-r{
     transform: translate(50px,0);
-    trnasition:transform 1s ease,opacity 1s ease;
+    transition:transform 1s ease,opacity 1s ease;
     opacity: 0;
 }
 
@@ -818,7 +818,7 @@ form{
         width: 500px;
         transform: translate(-50px,0);
         opacity: 0;
-        trnasition:transform 1s ease,opacity 1s ease;
+        transition:transform 1s ease,opacity 1s ease;
         z-index: 9;
     }
     .allside {
