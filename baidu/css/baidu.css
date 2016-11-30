@@ -239,6 +239,7 @@ form{
     top: -150px;
     left: 285px;
     animation: flight 2s ease;
+    animation-iteration-count: infinite;
 }
 @keyframes flight {
     0% {
@@ -320,8 +321,9 @@ form{
     text-indent: -9999em;
     float: left;
     background: url("../img/lx.png") no-repeat;
-    transform-style: preserve-3d;
+    /*transform-style: preserve-3d;*/
     animation: ain 2s ease;
+    animation-iteration-count: infinite;
 }
 @keyframes ain {
 
