@@ -8,6 +8,7 @@ $(function(){
     $(".fullpage").mousemove(function(e){
         e.preventDefault();
     });
+    // 向上滑
     touch.on("body","swipeup",".fullpage",function(){
         if(!flag){
             return;
@@ -23,6 +24,7 @@ $(function(){
         $(".btn").css({background:"none"}).eq(num).css({background:"#333"});
         flag=false;
     });
+    // 向下滑
     touch.on("body","swipedown",".fullpage",function(){
         if(!flag){
             return;
@@ -40,36 +42,91 @@ $(function(){
         flag=false;
     });
 
+    function bottom(){
+        if(!flag){
+            return;
+        }
+        num++;
+        if(num==$("section").length){
+            num=$("section").length-1;
+        }
+        $(".fullpage").css({marginTop:-num*heights,
+            transition:"margin-top 2s ease"
+        });
+        $(".btn").css({background:"none"}).eq(num).css({background:"#333"});
+        flag=false;
+    }
+    function top(){
+        if(!flag){
+            return;
+        }
+        num--;
+        if(num==-1){
+            num=0;
+        }
+        $(".fullpage").css({marginTop:-num*heights,
+            transition:"margin-top 2s ease"
+        });
+        $(".btn").css({background:"none"}).eq(num).css({background:"#333"});
+        flag=false;
+    }
+    var fullpage=$(".fullpage")[0];
+    mouseWheel(fullpage,function(){
+        top();
+    },function(){
+        bottom();
+    })
+
+
+// 监测动画完成
     $(".fullpage")[0].addEventListener("webkitTransitionEnd",function(){
         flag=true;
-        $(".ship").css({
-            transform:"translate(0,0)"
-        });
         $("section").each(function(index,obj){
             if(index==0){
+                $(".ship").css({
+                    transform:"translate(0,0)"
+                });
                 return;
             }
-            if(index==num){
-                $(".aa").eq(index).css({
-                    opacity:1,
-                    transform:"translate(0,0)"
+            if(!num==0){
+                $(".ship").css({
+                    transform:"translate(-20px,0)"
                 });
-                $(".bb").eq(index).css({
-                    opacity:1,
-                    transform:"translate(0,0)"
-                });
-            }else{
-                $(".aa").eq(index).css({
-                    opacity:0,
-                    transform:"translate(-50px,0)"
-                });
-                $(".bb").eq(index).css({
-                    opacity:0,
-                    transform:"translate(50px,0)"
-                });
+                if(index==num){
+                    $(".aa").eq(index).css({
+                        opacity:1,
+                        transform:"translate(0,0)"
+                    });
+                    $(".bb").eq(index).css({
+                        opacity:1,
+                        transform:"translate(0,0)"
+                    });
+                }else{
+                    $(".aa").eq(index).css({
+                        opacity:0,
+                        transform:"translate(-50px,0)"
+                    });
+                    $(".bb").eq(index).css({
+                        opacity:0,
+                        transform:"translate(50px,0)"
+                    });
+                }
             }
+
         })
     });
+
+    // 点击下面的箭头
+    $(".cc").click(function(){
+        num=$(this).index(".cc")+1;
+        $(".fullpage").css({
+            marginTop:-num*heights,
+            transition:"margin-top 2s ease"
+        });
+        $(".btn").css({background:"none"}).eq(num).css({background:"#333"});
+    });
+
+
 
 
 // 菜单
@@ -100,11 +157,12 @@ $(".min-right").click(function(){
     }
 
 });
+    // 检测屏幕大小
     $(window).resize(function(){
         heights=$(window).height();
-        widths=$(window).width();
+        var widths=$(window).width();
         $(".fullpage").css({marginTop:-num*heights});
-        if(widths>1000){
+            if(widths>1000){
             $(".top-line,.bottom-line").css({
                 transform:"translate(0,0) rotate(0deg)"
             });
