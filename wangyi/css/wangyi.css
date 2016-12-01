@@ -24,7 +24,7 @@ img{
 
 #fp-nav ul li span { display: none;}
 
-.fp-tooltip { float: left; top: 0; margin-right: 5px; font: 12px "Microsoft Yahei"; color: #8F9DA4; line-height: 21px;}
+#fp-nav ul li .fp-tooltip { float: left; top: 0; margin-right: 5px; font: 12px "Microsoft Yahei"; color: #8F9DA4; line-height: 21px;}
 
 .section{
     position: relative;
