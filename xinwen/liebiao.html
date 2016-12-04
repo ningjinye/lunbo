@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/xinwen.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+</head>
+<body>
+<div class="box box1">
+    <div class="tops">
+        <span>新闻快讯</span>
+    </div>
+    <a class="liebiao lb" href="neirong.html">
+        <img src="img/111.jpg" alt="">
+        <div class="zhezhao">2017年春运1月13日开始 系5年来最早</div>
+    </a>
+    <a class="liebiao" href="neirong.html">
+        <img src="img/222.jpg" alt="">
+        <div class="zhezhao">2017年春运1月13日开始 系5年来最早</div>
+    </a>
+    <a class="liebiao" href="neirong.html">
+        <img src="img/333.jpg" alt="">
+        <div class="zhezhao">2017年春运1月13日开始 系5年来最早</div>
+    </a>
+    <a class="liebiao" href="neirong.html">
+        <img src="img/111.jpg" alt="">
+        <div class="zhezhao">2017年春运1月13日开始 系5年来最早</div>
+    </a>
+    <div class="bottom">
+        <a class="bottom-nav" href="xinwen.html">
+            <img src="img/sy.png" alt="">
+            <span>首页</span>
+        </a>
+        <a class="bottom-nav" href="liebiao.html">
+            <img src="img/zl.png" alt="">
+            <span>专栏</span>
+        </a>
+        <a class="bottom-nav">
+            <img src="img/st.png" alt="">
+            <span>视听</span>
+        </a>
+        <a class="bottom-nav">
+            <img src="img/wd.png" alt="">
+            <span>我的</span>
+        </a>
+    </div>
+</div>
+</body>
+<script>
+    function resize(originSize,type){
+        var type=type||"x";
+        if(type=="x"){
+            var cw=document.documentElement.clientWidth;
+            var scale=cw/originSize*100;
+        }else if(type=="y"){
+            var ch=document.documentElement.clientHeight;
+            var scale=ch/originSize*100;
+        }
+        var html=document.querySelector("html");
+        html.style.fontSize=scale+"px";
+    }
+    resize(1334,"y");
+</script>
+</html>
