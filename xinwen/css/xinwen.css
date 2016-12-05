@@ -25,11 +25,48 @@ img{
     left: 0;
     z-index: 20;
 }
+.tops img{
+    width: 0.7rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 0.1rem;
+}
 .swiper-container{
     margin-top: 1rem;
 }
 .tops span{
     line-height: 1rem;
+    color: #AD9299;
+}
+.tops .zz{
+    color: #fff;
+}
+.line{
+    width: 0.6rem;
+    height: 0.8rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 0.2rem;
+}
+.top-line{
+    display: block;
+    width: 0.5rem;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 0.275rem;
+}
+.bottom-line{
+    display: block;
+    width: 0.5rem;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 0.275rem;
 }
 .swiper-container{
     width: 100%;
@@ -81,10 +118,9 @@ img{
     height: 0.32rem;
     font-size: 0.31rem;
     font-weight: bold;
-    position: absolute;
-    top: 0.3rem;
-    left: 0.22rem;
     color: #746E6E;
+    margin-top: 0.6rem;
+    margin-left: 0.22rem;
 }
 .tuijian span{
     color:#DC3D3D;
@@ -130,6 +166,7 @@ img{
     left: 0;
     display: flex;
     justify-content: space-between;
+    z-index: 99;
 }
 .bottom-nav{
     display: block;
@@ -153,6 +190,7 @@ img{
     margin: 0 auto;
     text-align: center;
     font-size: 0.25rem;
+    color: #8C8C8C;
 }
 .swiper-container-horizontal>.swiper-pagination-bullets{
     bottom: -0.1rem;
@@ -165,8 +203,62 @@ img{
     opacity: 1;
     background: #fff;
 }
+.swiper-slide{
+    overflow: hidden;
+}
 .swiper-slide img{
     width: 100%;
+}
+.dz{
+    position: absolute;
+    top: 2.3rem;
+    right: 0.25rem;
+}
+.dz1{
+    top: 1.8rem;
+}
+.dz img{
+    width: 0.35rem;
+    float: left;
+    margin-left: 0.1rem;
+}
+.dz span{
+    font-size: 0.25rem;
+    color: #8C8C8C;
+    float: left;
+    margin-left: 0.1rem;
+}
+.biaoti1{
+    top: 0.28rem;
+}
+.mrjx-k{
+    width: 100%;
+    height: 7rem;
+    position: relative;
+}
+.mrjx{
+    width: 7.06rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+    background: #F8EFF0;
+}
+.jx{
+    width: 3.4rem;
+    height: 2.5rem;
+    background: red;
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+    float: left;
+    overflow: hidden;
+}
+.jx1{
+    margin-right: 0;
+}
+.jx img{
+    height: 100%;
 }
 
 /*列表页*/
@@ -205,6 +297,34 @@ img{
     margin-top: 1.3rem;
     margin-left: 0.3rem;
     font-size: 0.34rem;
+    color: #6C6A6B;
+}
+.line1{
+    width: 0.6rem;
+    height: 0.8rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 0.2rem;
+}
+.top-line1{
+    display: block;
+    width: 0.34rem;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 0.275rem;
+    transform: rotate(-40deg);
+}
+.bottom-line1{
+    display: block;
+    width: 0.34rem;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 0.275rem;
+    transform: rotate(40deg);
 }
 .xbt{
     font-size: 0.2rem;
@@ -230,7 +350,11 @@ img{
 }
 .wenzhang{
     width:7rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     margin-top: 0.2rem;
-    margin-left: 0.3rem;
     font-size: 0.3rem;
+    color: #3B3B3B;
 }
