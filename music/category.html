@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>iScroll demo: simple</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script src="js/jquery.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script src="js/resize.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded () {
+	myScroll = new IScroll('#wrapper', { 
+		mouseWheel: true ,
+		bounce:true
+	});
+	console.log(myScroll);
+}
+document.addEventListener('touchmove', 
+function (e) { 
+	e.preventDefault();
+});
+$(function(){
+        var mySwiper = new Swiper ('.swiper-container',
+                {pagination: '.swiper-pagination'}
+        );
+    })
+</script>
+</head>
+<body onload="loaded()">
+<div id="header" class="head">
+	<img class="head1" src="img/head.png" alt="" />
+	<span>Biubiu Music</span>
+	<img class="head2" src="img/head2.png" alt="" />
+</div>
+<div id="wrapper">
+	<div id="scroller">
+	<div class="njy-nav">
+		<a href="wode.html">我的</a>
+		<a href="index.html">推荐</a>
+		<a class="active" href="category.html">分类</a>
+		<a href="list.html">MV</a>
+	</div>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	<img class="cate-img" src="img/slide.png" alt="" />
+        	<span class="xgsf">新歌首发</span>
+        	<span class="popu">The Popular Songs</span>
+        	<span class="line-tou"></span>
+        	<span class="shijie">世界巡回演唱会</span>
+        </div>
+        <div class="swiper-slide">
+        	<img class="cate-img" src="img/slide.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+        	<img class="cate-img" src="img/slide.png" alt="" />
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    </div>
+    <div class="tuijian">
+        热门<span>分类</span><span>&nbsp&nbspHot songs</span>
+    </div>
+    <div class="cate">
+    	<div class="cate-list">
+    		<img src="img/cate1.png" alt="" />
+    		<div class="cate-z"></div>
+    		<span class="cate-one">流行</span>
+    		<span class="cate-two">Popular</span>
+    	</div>
+    	<div class="cate-list">
+    		<img src="img/cate2.png" alt="" />
+    		<div class="cate-z"></div>
+    		<span class="cate-one">伤感</span>
+    		<span class="cate-two">Sadness</span>
+    	</div>
+    	<div class="cate-list">
+    		<img src="img/cate3.png" alt="" />
+    		<div class="cate-z"></div>
+    		<span class="cate-one">古典</span>
+    		<span class="cate-two">Classical</span>
+    	</div>
+    </div>
+    <div class="cate">
+    	<div class="cate-list">
+    		<img src="img/cate4.png" alt="" />
+    		<div class="cate-z"></div>
+    		<span class="cate-one">摇滚</span>
+    		<span class="cate-two">&nbsp&nbsp&nbspRock</span>
+    	</div>
+    	<div class="cate-list">
+    		<img src="img/cate5.png" alt="" />
+    		<div class="cate-z"></div>
+    		<span class="cate-one">特色</span>
+    		<span class="cate-two">Popular</span>
+    	</div>
+    	<div class="cate-list">
+    		<img src="img/cate6.png" alt="" />
+    		<div class="cate-z"></div>
+    		<div class="cate-jia">
+    			<div class="cate-top"></div>
+    			<div class="cate-bottom"></div>
+    		</div>
+    	</div>
+    </div>
+    
+    </div>
+    
+    
+    </div>
+</div>
+
+<a id="footer" href="play.html">
+	<div class="foot-tx">
+		<img src="img/touxiang.png" alt="" />
+	</div>
+	<div class="zb-ge foot-ge">
+    	<span>如果这都不算爱</span><br>
+    	<span>张学友</span>
+    </div>
+    <div class="foot-bf">
+    	<img class="foot-left" src="img/left.png" alt="" />
+    	<img class="foot-b" src="img/bf.png" alt="" />
+    	<img class="foot-right" src="img/right.png" alt="" />
+    </div>
+    <div class="foot-tu">
+    	<img src="img/tu.png" alt="" />
+    </div>
+    <div class="play-x"></div>
+</a>
+
+</body>
+</html>

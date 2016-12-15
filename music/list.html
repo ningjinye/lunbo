@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>iScroll demo: simple</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script src="js/jquery.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script src="js/resize.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded () {
+	myScroll = new IScroll('#wrapper', { 
+		mouseWheel: true ,
+		bounce:true
+	});
+	console.log(myScroll);
+}
+document.addEventListener('touchmove', 
+function (e) { 
+	e.preventDefault();
+});
+$(function(){
+        var mySwiper = new Swiper ('.swiper-container',
+                {pagination: '.swiper-pagination'}
+        );
+    })
+</script>
+</head>
+<body onload="loaded()">
+<div id="header" class="head">
+	<img class="head1" src="img/head.png" alt="" />
+	<span>Biubiu Music</span>
+	<img class="head2" src="img/head2.png" alt="" />
+</div>
+<div id="wrapper">
+	<div id="scroller">
+	<div class="njy-nav">
+		<a href="wode.html">我的</a>
+		<a href="index.html">推荐</a>
+		<a href="category.html">分类</a>
+		<a class="active" href="list.html">MV</a>
+	</div>
+    <div class="mv-list">
+    	<img src="img/tt1.png" alt="" class="mv-tx" />
+    	<span class="mv-word">流行</span>
+    	<span class="mv-right">120首MV</span>
+    	<div class="mv-jiao">
+    		<span class="top-line"></span>
+    		<span class="bottom-line"></span>
+    	</div>
+    </div>
+    <div class="mv-list">
+    	<img src="img/tt2.png" alt="" class="mv-tx" />
+    	<span class="mv-word">流行</span>
+    	<span class="mv-right">120首MV</span>
+    	<div class="mv-jiao">
+    		<span class="top-line"></span>
+    		<span class="bottom-line"></span>
+    	</div>
+    </div><div class="mv-list">
+    	<img src="img/tt8.png" alt="" class="mv-tx" />
+    	<span class="mv-word">流行</span>
+    	<span class="mv-right">120首MV</span>
+    	<div class="mv-jiao">
+    		<span class="top-line"></span>
+    		<span class="bottom-line"></span>
+    	</div>
+    </div><div class="mv-list">
+    	<img src="img/tt3.png" alt="" class="mv-tx" />
+    	<span class="mv-word">流行</span>
+    	<span class="mv-right">120首MV</span>
+    	<div class="mv-jiao">
+    		<span class="top-line"></span>
+    		<span class="bottom-line"></span>
+    	</div>
+    </div><div class="mv-list">
+    	<img src="img/tt4.png" alt="" class="mv-tx" />
+    	<span class="mv-word">流行</span>
+    	<span class="mv-right">120首MV</span>
+    	<div class="mv-jiao">
+    		<span class="top-line"></span>
+    		<span class="bottom-line"></span>
+    	</div>
+    </div>
+    <div class="mv-list">
+    	<img src="img/tt5.png" alt="" class="mv-tx" />
+    	<span class="mv-word">流行</span>
+    	<span class="mv-right">120首MV</span>
+    	<div class="mv-jiao">
+    		<span class="top-line"></span>
+    		<span class="bottom-line"></span>
+    	</div>
+    </div>
+    <div class="mv-list">
+    	<img src="img/tt6.png" alt="" class="mv-tx" />
+    	<span class="mv-word">流行</span>
+    	<span class="mv-right">120首MV</span>
+    	<div class="mv-jiao">
+    		<span class="top-line"></span>
+    		<span class="bottom-line"></span>
+    	</div>
+    </div>
+    <div class="mv-list">
+    	<img src="img/tt7.png" alt="" class="mv-tx" />
+    	<span class="mv-word">流行</span>
+    	<span class="mv-right">120首MV</span>
+    	<div class="mv-jiao">
+    		<span class="top-line"></span>
+    		<span class="bottom-line"></span>
+    	</div>
+    </div>
+    </div>
+</div>
+
+<a id="footer" href="play.html">
+	<div class="foot-tx">
+		<img src="img/touxiang.png" alt="" />
+	</div>
+	<div class="zb-ge foot-ge">
+    	<span>如果这都不算爱</span><br>
+    	<span>张学友</span>
+    </div>
+    <div class="foot-bf">
+    	<img class="foot-left" src="img/left.png" alt="" />
+    	<img class="foot-b" src="img/bf.png" alt="" />
+    	<img class="foot-right" src="img/right.png" alt="" />
+    </div>
+    <div class="foot-tu">
+    	<img src="img/tu.png" alt="" />
+    </div>
+    <div class="play-x"></div>
+</a>
+
+</body>
+</html>

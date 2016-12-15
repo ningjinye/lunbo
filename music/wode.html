@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>iScroll demo: simple</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script src="js/jquery.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script src="js/resize.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded () {
+	myScroll = new IScroll('#wrapper', { 
+		mouseWheel: true ,
+		bounce:true
+	});
+	console.log(myScroll);
+}
+document.addEventListener('touchmove', 
+function (e) { 
+	e.preventDefault();
+});
+$(function(){
+        var mySwiper = new Swiper ('.swiper-container',
+                {pagination: '.swiper-pagination'}
+        );
+    })
+</script>
+</head>
+<body onload="loaded()">
+<div id="header" class="head">
+	<img class="head1" src="img/head.png" alt="" />
+	<span>Biubiu Music</span>
+	<img class="head2" src="img/head2.png" alt="" />
+</div>
+<div id="wrapper">
+	<div id="scroller">
+	<div class="njy-nav">
+		<a class="active" href="wode.html">我的</a>
+		<a href="index.html">推荐</a>
+		<a href="category.html">分类</a>
+		<a href="list.html">MV</a>
+	</div>
+    </div>
+    <div class="wd-tx">
+    	<img src="img/txx.png" alt="" />
+    </div>
+    <span class="wd-nc">Webster</span>
+    <ul class="wd-zon">
+    	<li>
+    		<img class="wd1" src="img/wd1.png" alt="" />
+    		<span>&nbsp&nbsp&nbsp本地歌曲</span>
+    		<span>20首歌曲</span>
+    		<img src="img/xjt.png" alt="" class="wd-xjt" />
+    	</li>
+        <li>
+        	<img class="wd1" src="img/wd2.png" alt="" />
+    		<span>&nbsp&nbsp&nbsp下载歌曲</span>
+    		<span>20首歌曲</span>
+    		<img src="img/xjt.png" alt="" class="wd-xjt" />
+        </li>
+        <li>
+        	<img class="wd1" src="img/wd3.png" alt="" />
+    		<span>&nbsp&nbsp&nbsp收藏歌曲</span>
+    		<span>20首歌曲</span>
+    		<img src="img/xjt.png" alt="" class="wd-xjt" />
+        </li>
+        <li class="wd-list">
+        	<img class="wd1" src="img/wd4.png" alt="" />
+    		<span>&nbsp&nbsp&nbsp添加歌单</span>
+        </li>
+    </ul>
+    
+    </div>
+</div>
+
+<a id="footer" href="play.html">
+	<div class="foot-tx">
+		<img src="img/touxiang.png" alt="" />
+	</div>
+	<div class="zb-ge foot-ge">
+    	<span>如果这都不算爱</span><br>
+    	<span>张学友</span>
+    </div>
+    <div class="foot-bf">
+    	<img class="foot-left" src="img/left.png" alt="" />
+    	<img class="foot-b" src="img/bf.png" alt="" />
+    	<img class="foot-right" src="img/right.png" alt="" />
+    </div>
+    <div class="foot-tu">
+    	<img src="img/tu.png" alt="" />
+    </div>
+    <div class="play-x"></div>
+</a>
+
+</body>
+</html>
+
